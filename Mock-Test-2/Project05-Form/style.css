@@ -1,0 +1,45 @@
+body {
+  background-color: #05d7e2;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: 1fr;
+  gap: 3px;
+  width: 35%;
+  height: 20%;
+  margin-top: 30px;
+  margin-left: 33%;
+  box-shadow: 10px 10px 10px #3e3e3e;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #06217a86;
+}
+
+input {
+  padding: 8px 30px;
+  border-radius: 20px;
+  border: none;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#submit {
+  width: fit-content;
+  margin: auto;
+  padding: 2vh 1.5vw;
+  font-weight: bold;
+  background: #fd1524;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#color-picker {
+  width: 20%;
+  padding: 0;
+  border-radius: 0px;
+}

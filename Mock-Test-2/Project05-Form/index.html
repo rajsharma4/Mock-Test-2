@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with validation</title>
+    <!-- Adding CSS here -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div>
+        <form class="form" id="myForm">
+            <!-- name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Type your name here">
+            <!-- email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Type your email here">
+            <!-- phone number -->
+            <label for="phoneNo">Phone No:</label>
+            <input type="tel" id="phone" placeholder="Type your number here">
+            <!-- password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Type password here">
+            <!-- age -->
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" placeholder="Type your age here">
+            <!-- gender -->
+            <label for="gender">Gender:</label>
+            <div class="gender">
+                <label>
+                    <input type="radio" name="gender" value="male">
+                    <span class="circle">Male</span>
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    <span class="circle">Female</span>
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other">
+                    <span class="circle">Other</span>
+                </label>
+            </div>
+            <!-- date -->
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date">
+            <!-- color picker -->
+            <label for="color-picker">Color:</label>
+            <input type="color" id="color">
+            <!-- submit -->
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+
+    <!-- Adding js here -->
+    <script src="./script.js"></script>
+    <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        if (!validateName() || !validateEmail() || !validatePhoneNumber() || !validatePassword() || !validateAge() || !validateGender() || !validateDate() || !validateColor()) {
+            event.preventDefault(); 
+        }
+    });
+    </script>
+</body>
+
+</html>
